@@ -6,6 +6,7 @@ import studentrecord.exceptions.InvalidIdException;
 import studentrecord.exceptions.ListIsEmptyException;
 import studentrecord.exceptions.MaxAttemptExceededException;
 import studentrecord.models.Student;
+import studentrecord.util.InputValidationUtils;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -33,7 +34,7 @@ public class StudentRecordManagementImpl implements StudentRecordManagement {
                     System.out.println(maxLimit.getMessage());
                     return;
                 }
-
+        System.out.println("-------------------------------------");
         System.out.println(student);
         System.out.println("Student Details Added Successfully!");
         System.out.println("-------------------------------------");
@@ -51,8 +52,14 @@ public class StudentRecordManagementImpl implements StudentRecordManagement {
            return;
        }
         //take input from user
+        int student_id;
         System.out.println("Please Enter the Student Id : ");
-        int student_id = sc.nextInt();
+       try{
+            student_id = InputValidationUtils.validateIntegerInput(sc.nextLine());//validating input.Input should be only interge
+       }catch (MaxAttemptExceededException maxAttempt){
+           System.out.println(maxAttempt.getMessage());
+           return;
+       }
 
         Student student=null;
         try{
@@ -105,10 +112,16 @@ public class StudentRecordManagementImpl implements StudentRecordManagement {
             return;
         }
          //take input from user
+        int student_id;
         System.out.println("Please Enter the Student Id to Update: ");
-        int student_id = sc.nextInt();
+        try{
+            student_id = InputValidationUtils.validateIntegerInput(sc.nextLine());//validating input.Input should be only interge
+        }catch (MaxAttemptExceededException maxAttempt){
+            System.out.println(maxAttempt.getMessage());
+            return;
+        }
 
-        Student updatedStudent =null;
+        Student updatedStudent;
         try{
             //getting student details by id
             updatedStudent = studentClient.updateStudentDetails(student_id);
@@ -135,8 +148,14 @@ public class StudentRecordManagementImpl implements StudentRecordManagement {
             return;
         }
         //take input from user
+        int student_id;
         System.out.println("Please Enter the Student Id to delete: ");
-        int student_id = sc.nextInt();
+        try{
+            student_id = InputValidationUtils.validateIntegerInput(sc.nextLine());//validating input.Input should be only interge
+        }catch (MaxAttemptExceededException maxAttempt){
+            System.out.println(maxAttempt.getMessage());
+            return;
+        }
 
         Student deletedStudent =null;
         try{

@@ -1,5 +1,5 @@
 ** Student Record Management System – Console Application **
-The Student Record Management System is a Java-based console application that enables efficient and structured management of student records. 
+- The Student Record Management System is a Java-based console application that enables efficient and structured management of student records. 
 It follows Object-Oriented Programming principles and utilizes custom exception handling, interface-based design, and utility classes to ensure clean, maintainable, and modular code.
 
 This project simulates real-world CRUD operations—Create, Read, Update, and Delete—on student data, providing a user-friendly menu-driven interface.

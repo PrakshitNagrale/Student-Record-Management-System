@@ -117,22 +117,21 @@ public class StudentClient {
 
 
     //to insert the student details
-    Student insertStudentDetails(Student student){
+    Student insertStudentDetails(Student student)throws MaxAttemptExceededException{
 
 
         System.out.println("Please Enter The Student Name : ");
-        student.setName(sc.nextLine());
+        student.setName(InputValidationUtils.validateStringInput(sc.nextLine()));
 
         System.out.println("Please Enter The Student Age : ");
-        student.setAge(sc.nextInt());
+        student.setAge(InputValidationUtils.validateIntegerInput(sc.nextLine()));
         System.out.println("Please Enter The Student RollNo. : ");
-        student.setRollNo(sc.nextInt());
+        student.setRollNo(InputValidationUtils.validateIntegerInput(sc.nextLine()));
         System.out.println("Please Enter The Student Marks: ");
-        student.setMarks(sc.nextInt());
+        student.setMarks(InputValidationUtils.validateIntegerInput(sc.nextLine()));
 
-        sc.nextLine();
         System.out.println("Please Enter The Student Department : ");
-        student.setDepartment(sc.nextLine());
+        student.setDepartment(InputValidationUtils.validateStringInput(sc.nextLine()));
 
         return student;
 
