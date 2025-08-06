@@ -32,7 +32,7 @@ This project simulates real-world CRUD operations—Create, Read, Update, and De
 
 - Utility class for input validation
 
-* Package Structure -
+** Package Structure -
 
 - studentRecordApp/ -->    Main application class with the menu
 - studentRecordsService/ -->  Business logic and service interface
@@ -52,13 +52,14 @@ This project simulates real-world CRUD operations—Create, Read, Update, and De
 - MaxAttemptExceededException – Thrown after repeated invalid input attempts.
 
 ** Highlights:-
-Robust input handling using a utility class (InputValidationUtils)
 
-Retry mechanism to limit invalid input attempts
+- Input handling using a utility class (InputValidationUtils)
 
-Readable console output with clear user instructions
+- Retry mechanism to limit invalid input attempts
 
-Easily extendable design for future enhancements (e.g., file/database integration)
+- Readable console output with clear user instructions
+
+- Easily extendable design for future enhancements (e.g., file/database integration)
 
 ** Example output:-
 
@@ -71,25 +72,27 @@ Easily extendable design for future enhancements (e.g., file/database integratio
 6. Exit
    Choose an option to perform :
    1
-   Please Enter The Student Id :
+
+- Please Enter The Student Id :
    1
-   Please Enter The Student Name :
+- Please Enter The Student Name :
    Yogesh
-   Please Enter The Student Age :
+- Please Enter The Student Age :
    27
-   Please Enter The Student RollNo. :
+- Please Enter The Student RollNo. :
    54
-   Please Enter The Student Marks:
+- Please Enter The Student Marks:
    87
-   Please Enter The Student Department :
+- Please Enter The Student Department :
    Computer Science
-   Student Id: 1
-   Student Name: Yogesh
-   Student RollNo: 54
-   Student Age: 27
-   Student Marks: 87
-   Student Department: Computer Science
-   Student Details Added Successfully!
+
+- Student Id: 1
+- Student Name: Yogesh
+- Student RollNo: 54
+- Student Age: 27
+- Student Marks: 87
+- Student Department: Computer Science 
+- Student Details Added Successfully!
 -------------------------------------
 1. Add Student
 2. View Student By Id
@@ -99,4 +102,4 @@ Easily extendable design for future enhancements (e.g., file/database integratio
 6. Exit
    Choose an option to perform :
    6
-   **** Application Terminated! ****
+- **** Application Terminated! ****
